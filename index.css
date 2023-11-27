@@ -1,5 +1,49 @@
  body {
   font-family: "Poppins", sans-serif;
+  background-color: rgb(98, 185, 185);
+}
+.container{
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.navbar .right img{
+  width:24px ;
+  height:24px ;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 0;
+}
+.navbar .left{
+  font-size: 32px;
+  font-weight: bold;
+}
+.navbar .right{
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ .navbar .right a{
+  text-decoration: none;
+  color: black;
+}
+ .navbar .right a:hover{
+  text-decoration: underline ;
+}
+.navbar .bar{
+  background-color: black;
+  height: 4px;
+  width: 36px;
+  margin: 3px;
+}
+.navbar .hamburger{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: none;
 }
 
 .project-grid {
@@ -14,8 +58,7 @@
     "foam foam dimensional";
     gap: 16px;
     width: 100%;
-    max-width: 90%;
-    margin: 0 auto;
+    
 }
 
 
@@ -85,9 +128,16 @@
 .overlay.white{
     color: whitesmoke;
   }
+  .footer{
+    text-align: center;
+    padding: 64px;
+    font-weight: bold;
+  }
 
   @media only screen and (max-width: 1000px){
-
+    .container{
+      max-width:100% ;
+    }
     .project-grid{
       max-width: 100%;
       grid-template-areas:
@@ -102,6 +152,36 @@
     
   }
   @media only screen and (max-width: 768px){
+    .container{
+      padding: 0;
+    }
+    .footer{
+      padding: 16px 0px ;
+    }
+    .project-grid{
+      margin-top: 100px;
+      gap: 8px;
+    }
+    .navbar{
+      padding: 16px 24px;
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      background-color: rgb(98, 185, 185);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .navbar .right{
+      display: none;
+    }
+    .navbar .hamburger{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
 
     .project-grid{
       max-width: 100%;
